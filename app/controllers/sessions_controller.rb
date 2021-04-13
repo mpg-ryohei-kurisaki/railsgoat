@@ -25,7 +25,7 @@ class SessionsController < ApplicationController
       end
       redirect_to path
     else
-      flash[:error] = e.message
+      flash[:error] = "Incorrect password or email"
       render "sessions/new"
     end
   end
